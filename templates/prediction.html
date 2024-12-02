@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: auto; }
+        .section { margin-bottom: 30px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Results for {{ district_id_input.capitalize() }}</h1>
+        <div class="section">
+            <h2>Predicted Climatic Factors</h2>
+            <table>
+                <tr>
+                    <th>Factor</th>
+                    <th>Predicted Value</th>
+                </tr>
+                {% for factor, value in climatic_factors.items() %}
+                <tr>
+                    <td>{{ factor }}</td>
+                    <td>{{ "%.2f"|format(value) }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Predicted Disease Data</h2>
+            <table>
+                <tr>
+                    <th>Metric</th>
+                    <th>Predicted Value</th>
+                </tr>
+                {% for metric, value in disease_data.items() %}
+                <tr>
+                    <td>{{ metric }}</td>
+                    <td>{{ value }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Predicted Susceptibilities per Species</h2>
+            <table>
+                <tr>
+                    <th>Species</th>
+                    <th>Number of Susceptible</th>
+                </tr>
+                {% for species, susceptible in disease_data.items() %}
+                    {% if species in ['Pig', 'Cattle', 'Bird'] %}
+                        <tr>
+                            <td>{{ species }}</td>
+                            <td>{{ susceptible }}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+
+        <a href="{{ url_for('index') }}">Back to Home</a>
+    </div>
+</body>
+</html>

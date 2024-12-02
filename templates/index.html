@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Outbreak Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #333; }
+        form { margin-top: 20px; }
+        label { display: block; margin-top: 10px; }
+        input, select { padding: 8px; width: 200px; }
+        button { margin-top: 20px; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h1>Disease Outbreak Prediction</h1>
+    <form method="POST">
+        <label for="district_id">District ID:</label>
+        <select name="district_id" required>
+            {% for district in districts %}
+            <option value="{{ district }}">{{ district }}</option>
+            {% endfor %}
+        </select>
+        
+        <label for="month">Month (1-12):</label>
+        <input type="number" name="month" min="1" max="12" required>
+        
+        <label for="year">Year:</label>
+        <input type="number" name="year" min="2000" required>
+        
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

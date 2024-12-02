@@ -1,0 +1,117 @@
+2024-11-22 17:25:37,251 ERROR:Error loading Excel file: [Errno 2] No such file or directory: 'data/updated_FMD_data_with_lat_long.xlsx'
+2024-11-24 00:39:00,097 INFO __main__ Excel file loaded successfully!
+2024-11-24 00:39:00,097 INFO __main__ 
+Column Names in the DataFrame:
+2024-11-24 00:39:00,098 INFO __main__ ['state_name', 'state_id', 'district_id', 'district_name', 'year', 'month', 'species_name', 'disease_id', 'disease_name', 'number_of_outbreaks', 'number_susceptible', 'number_of_attacks', 'number_of_deaths', 'latitude', 'longitude', 'Max Temp', 'Min Temp', 'Rainfall', 'Unnamed: 18', 'Unnamed: 19', 'Unnamed: 20', 'Unnamed: 21', 'Unnamed: 22']
+2024-11-24 00:39:00,105 INFO __main__ 
+Available district_id values:
+2024-11-24 00:39:00,106 INFO __main__ ['2807' '2801' '2812' '2802' '2814' '2803' '2817' '2818' '2808' '2804'
+ '2805' '2813' '2806' '2811' '2815' '2816' '2819']
+2024-11-24 00:39:00,107 INFO __main__ 
+Distribution of district_id in the dataset:
+2024-11-24 00:39:00,108 INFO __main__ district_id
+2801    6.80
+2803    6.80
+2808    6.56
+2812    6.40
+2813    6.36
+2806    6.20
+2816    6.04
+2815    5.96
+2818    5.92
+2817    5.84
+2805    5.84
+2807    5.60
+2804    5.48
+2811    5.20
+2802    5.16
+2814    5.00
+2819    4.84
+Name: proportion, dtype: float64
+2024-11-24 00:39:00,112 INFO __main__ Removed 166 outliers from 'Max Temp'
+2024-11-24 00:39:00,115 INFO __main__ Removed 1 outliers from 'Min Temp'
+2024-11-24 00:39:00,117 INFO __main__ Removed 49 outliers from 'Rainfall'
+2024-11-24 00:39:00,118 INFO __main__ Removed 0 outliers from 'number_of_outbreaks'
+2024-11-24 00:39:00,120 INFO __main__ Removed 88 outliers from 'number_susceptible'
+2024-11-24 00:39:00,123 INFO __main__ Removed 13 outliers from 'number_of_attacks'
+2024-11-24 00:39:00,124 INFO __main__ Removed 0 outliers from 'number_of_deaths'
+2024-11-24 00:43:15,334 INFO __main__ Excel file loaded successfully!
+2024-11-24 00:43:15,334 INFO __main__ 
+Column Names in the DataFrame:
+2024-11-24 00:43:15,335 INFO __main__ ['state_name', 'state_id', 'district_id', 'district_name', 'year', 'month', 'species_name', 'disease_id', 'disease_name', 'number_of_outbreaks', 'number_susceptible', 'number_of_attacks', 'number_of_deaths', 'latitude', 'longitude', 'Max Temp', 'Min Temp', 'Rainfall', 'Unnamed: 18', 'Unnamed: 19', 'Unnamed: 20', 'Unnamed: 21', 'Unnamed: 22']
+2024-11-24 00:43:15,342 INFO __main__ 
+Available district_id values:
+2024-11-24 00:43:15,342 INFO __main__ ['2807' '2801' '2812' '2802' '2814' '2803' '2817' '2818' '2808' '2804'
+ '2805' '2813' '2806' '2811' '2815' '2816' '2819']
+2024-11-24 00:43:15,342 INFO __main__ 
+Distribution of district_id in the dataset:
+2024-11-24 00:43:15,343 INFO __main__ district_id
+2801    6.80
+2803    6.80
+2808    6.56
+2812    6.40
+2813    6.36
+2806    6.20
+2816    6.04
+2815    5.96
+2818    5.92
+2817    5.84
+2805    5.84
+2807    5.60
+2804    5.48
+2811    5.20
+2802    5.16
+2814    5.00
+2819    4.84
+Name: proportion, dtype: float64
+2024-11-24 00:43:15,347 INFO __main__ Removed 166 outliers from 'Max Temp'
+2024-11-24 00:43:15,349 INFO __main__ Removed 1 outliers from 'Min Temp'
+2024-11-24 00:43:15,350 INFO __main__ Removed 49 outliers from 'Rainfall'
+2024-11-24 00:43:15,352 INFO __main__ Removed 0 outliers from 'number_of_outbreaks'
+2024-11-24 00:43:15,354 INFO __main__ Removed 88 outliers from 'number_susceptible'
+2024-11-24 00:43:15,356 INFO __main__ Removed 13 outliers from 'number_of_attacks'
+2024-11-24 00:43:15,357 INFO __main__ Removed 0 outliers from 'number_of_deaths'
+2024-11-24 00:43:15,460 INFO __main__ 
+Dataset split:
+2024-11-24 00:43:15,461 INFO __main__  - Training set size: 1536 samples (80.00%)
+2024-11-24 00:43:15,461 INFO __main__  - Testing set size: 384 samples (20.00%)
+2024-11-24 00:43:15,462 INFO __main__ 
+Training model for 'number_of_outbreaks'...
+2024-11-24 00:43:25,116 INFO __main__ Best Parameters for model: {'n_estimators': 100, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_depth': 10, 'bootstrap': True}
+2024-11-24 00:43:25,379 INFO __main__ 
+Training model for 'number_susceptible'...
+2024-11-24 00:43:32,552 INFO __main__ Best Parameters for model: {'n_estimators': 100, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_depth': 10, 'bootstrap': True}
+2024-11-24 00:43:32,681 INFO __main__ 
+Training model for 'number_of_attacks'...
+2024-11-24 00:43:39,687 INFO __main__ Best Parameters for model: {'n_estimators': 100, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_depth': 10, 'bootstrap': True}
+2024-11-24 00:43:39,818 INFO __main__ 
+Training model for 'number_of_deaths'...
+2024-11-24 00:43:46,723 INFO __main__ Best Parameters for model: {'n_estimators': 100, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_depth': 10, 'bootstrap': True}
+2024-11-24 00:43:46,859 INFO __main__ 
+Model Evaluation:
+2024-11-24 00:43:46,879 INFO __main__ 
+number_of_outbreaks:
+2024-11-24 00:43:46,880 INFO __main__  - R² Score on Training Set: 51.91%
+2024-11-24 00:43:46,880 INFO __main__  - R² Score on Testing Set: -6.29%
+2024-11-24 00:43:46,880 INFO __main__  - Mean Absolute Error on Testing Set: 0.84
+2024-11-24 00:43:46,880 INFO __main__  - Mean Squared Error on Testing Set: 0.99
+2024-11-24 00:43:46,898 INFO __main__ 
+number_susceptible:
+2024-11-24 00:43:46,898 INFO __main__  - R² Score on Training Set: 53.79%
+2024-11-24 00:43:46,898 INFO __main__  - R² Score on Testing Set: -11.35%
+2024-11-24 00:43:46,899 INFO __main__  - Mean Absolute Error on Testing Set: 29.34
+2024-11-24 00:43:46,899 INFO __main__  - Mean Squared Error on Testing Set: 1433.35
+2024-11-24 00:43:46,917 INFO __main__ 
+number_of_attacks:
+2024-11-24 00:43:46,918 INFO __main__  - R² Score on Training Set: 56.28%
+2024-11-24 00:43:46,918 INFO __main__  - R² Score on Testing Set: -12.94%
+2024-11-24 00:43:46,918 INFO __main__  - Mean Absolute Error on Testing Set: 16.90
+2024-11-24 00:43:46,918 INFO __main__  - Mean Squared Error on Testing Set: 472.61
+2024-11-24 00:43:46,937 INFO __main__ 
+number_of_deaths:
+2024-11-24 00:43:46,937 INFO __main__  - R² Score on Training Set: 59.19%
+2024-11-24 00:43:46,938 INFO __main__  - R² Score on Testing Set: -11.34%
+2024-11-24 00:43:46,938 INFO __main__  - Mean Absolute Error on Testing Set: 2.29
+2024-11-24 00:43:46,938 INFO __main__  - Mean Squared Error on Testing Set: 7.61
+2024-11-24 00:43:47,104 INFO __main__ 
+Determining optimal SARIMAX parameters for Max Temp...

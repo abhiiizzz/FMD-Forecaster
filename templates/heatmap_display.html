@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>West Bengal Heatmap - {{ month }}/{{ year }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            text-align: center;
+        }
+        .map-container {
+            width: 100%;
+            height: 600px;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>West Bengal Disease Outbreak Heatmap for {{ month }}/{{ year }}</h1>
+    <div class="map-container">
+        {{ heatmap|safe }}
+    </div>
+    <br>
+    <a href="{{ url_for('heatmap') }}">Generate Another Heatmap</a>
+    <br>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
